@@ -1,0 +1,118 @@
+Credit: Emmanuel Dadzie's Github:
+https://github.com/eadadzie/Tech_Talent_South-Data_Science/blob/master/How_To.txt
+
+
+########### SETTING UP THE GITHUB REPO FROM A LOCAL PROJECT FOR THE FIRST TIME ############
+
+1. Create the Github Repo on the github websit, make it public, but don't create any file (not even the Read me) or folder.
+   Copy the new repo's link for initialize the local repo on you drive. 
+
+
+2. Using Git Bash, change the directory to the location of the local folder on you computer.
+
+	$ cd Desktop/"GAP - Program"/"2. Data Science"/   ---> for my case
+
+3. Initiate the Project/local folder as Github local folder
+
+	$ git init
+
+4. Connect your local project/folder to the empty repo on Github
+	
+	$ git remote add origin https://github.com/eadadzie/Tech_Talent_South_-TTS-.git
+	
+	* You may be asked to login using:
+		
+		$ git config --global user.name "user_name"
+
+5. Check the connection of the link.
+
+	$ git remote -v
+
+6. Add all files in the local folder for the first time.
+
+	$ git add .
+
+7. Commit added files to new Github repo.
+
+	$ git commit -m "Add your message"
+
+8. Push to new Github repo.
+
+	$ git push origin master
+
+
+## For some reason, if you want to change the URL for Github Repo or shift the current repo to a new one
+   while maintaining the local PC folder.
+
+	a) Navigate to the local folder:
+	   $ cd Desktop/"GAP - Program"/"2. Data Science"/
+	
+	b) Check the current url link:
+	   $ git remote -v
+	   ---> origin  https://github.com/eadadzie/Tech_Talent_South_-TTS-.git (fetch)
+	   ---> origin  https://github.com/eadadzie/Tech_Talent_South_-TTS-.git (push)
+
+	c) Change the url to the new one, and check the connection:
+	   $ git remote set-url origin https://github.com/eadadzie/Tech_Talent_South-Data_Science.git
+	   $ git remote -v
+	   ---> origin  https://github.com/eadadzie/Tech_Talent_South-Data_Science.git (fetch)
+	   ---> origin  https://github.com/eadadzie/Tech_Talent_South-Data_Science.git (push)
+	
+	d) Push content in the local folder to the new Github repo
+	   $ git push origin master
+
+
+
+################ ADDING AND REMOVING FILES FROM THE GITHUB REPO USING BASH ###################
+
+1. In Bash, change directory to local folder.
+
+2. Add file(s) to folder.
+
+	$ git add File_name.txt
+
+3. Check if file is added.
+
+	$ git status
+
+4. Commit file(s) to Github repo.
+
+	$ git commit -m "Add your message"
+
+5. Push all changes to Github repo.
+
+	$ git push origin master
+
+6. To remove file from Github repo.
+
+	$ git rm -f File_name.txt
+
+7. Commit changes.
+
+	$ git commit -m "Add your message"
+
+8. Push changes to repo.
+
+	$ git push origin master
+
+
+
+############# TROUBLE SHOOTING FOR ADDING FILES AFTER CHANGING URL ###############
+
+1. Remove the lock on the local folder linked to the previous Github repo link.
+
+	$ rm -f .git/index.lock
+
+2. The proceed with adding files.
+
+
+
+########## Other Commands for Git Bash #####################
+
+1. Copy a file from one location on your PC to another.
+
+	$ cp -r /c/Users/eadob/Desktop/"GAP - Program"/SettingUP_Github_Repo_from_Bash.txt /c/Users/eadob/Desktop/"GAP - Program"/"2. Data Science"
+
+2. Check processes running.
+
+	$ ps
